@@ -80,7 +80,7 @@ export class Service {
     }
   }
 
-  async daletePost(slug) {
+  async deletePost(slug) {
     try {
       await this.databases.deleteDocument(
         conf.appwriteDatabaseId,
