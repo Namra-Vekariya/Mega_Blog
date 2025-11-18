@@ -1,8 +1,18 @@
 import React from "react";
-import { Editor } from "tinymce";
+import { Editor } from "@tinymce/tinymce-react";
 import { Controller } from "react-hook-form";
+import conf from "../conf/conf";
 
 export default function RTE({ name, control, label, defaultValue = "" }) {
+  const apiKey = conf.tinymceApiKey;
+  const scriptSrc = `https://cdn.tiny.cloud/1/${
+    apiKey || "no-api-key"
+  }/tinymce/7/tinymce.min.js`;
+
+  if (!apiKey) {
+    console.warn("TinyMCE API key is missing. Set VITE_TINYMCE_API_KEY.");
+  }
+
   return (
     <div className='w-full'>
       {label && <label className='inline-block mb-1 pl-1'>{label}</label>}
@@ -12,6 +22,8 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
         control={control}
         render={({ field: { onChange } }) => (
           <Editor
+            apiKey='8ur5gbjuanxtf6zob7hjo1pt2i4akj885x6g8662snfz6snk'
+            tinymceScriptSrc={scriptSrc}
             initialValue={defaultValue}
             init={{
               initialValue: defaultValue,
@@ -50,4 +62,4 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
       />
     </div>
   );
-}
+

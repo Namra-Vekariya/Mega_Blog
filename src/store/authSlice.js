@@ -13,7 +13,14 @@ const authSlice = createSlice({
       state.status = true;
       state.userData = action.payload;
     },
-    logout: (state) => {
+    /*************  ✨ Windsurf Command ⭐  *************/
+    /**
+     * Set the authentication status to false and reset the user data.
+     * @param {object} state - The state of the authSlice.
+     */
+    /*******  bc5e1917-ee43-4f2d-8927-805ed5b0ae4c  *******/ logout: (
+      state
+    ) => {
       state.status = false;
       state.userData = null;
     },

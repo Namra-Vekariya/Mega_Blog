@@ -1,0 +1,8 @@
+Mega Blog Application					           [Date Range - e.g., Jan 2024 – May 2024]
+
+   Tech stack: React, Redux Toolkit, Appwrite, TinyMCE, React Router, Tailwind CSS
+
+•	Developed a full-stack blog application with user authentication, session management, and complete CRUD operations for blog posts;
+
+•	Engineered a scalable frontend architecture using React with Redux Toolkit for state management, implementing protected routes, user-specific post management, and integrated Appwrite backend services for secure authentication, database operations, and cloud storage.
+
